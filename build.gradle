@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testImplementation('org.seleniumhq.selenium:selenium-java:4.6.0')
+    testImplementation('org.seleniumhq.selenium:selenium-support:4.6.0')
+    testImplementation('com.deque.html.axe-core:selenium:4.3.2')
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+}
+
+test {
+    useJUnitPlatform()
+}

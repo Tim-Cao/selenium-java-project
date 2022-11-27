@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - AccessibilityTesting</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>AccessibilityTesting</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.liferay.selenium.html">com.liferay.selenium</a> &gt; AccessibilityTesting</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">8.498s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="scanHomePage()"></a>
+<h3 class="failures">scanHomePage()</h3>
+<span class="code">
+<pre>java.lang.Exception: ACCESSIBILITY CHECK
+VIOLATIONS check for: https://www.liferay.com/
+Found 5 items
+
+1: Buttons must have discernible text
+Description: Ensures buttons have discernible text
+Help URL: https://dequeuniversity.com/rules/axe/4.3/button-name?application=axeAPI
+Impact: critical
+Tags: cat.name-role-value, wcag2a, wcag412, section508, section508.22.a, ACT
+		HTML element: &lt;button class=&quot;class-toggle close close-icon cookie-alert&quot; id=&quot;closeButton&quot;&gt; 
+     &lt;svg height=&quot;12&quot; style=&quot;color: #FFF;&quot; width=&quot;12&quot;&gt; 
+      &lt;use xlink:href=&quot;#closeIcon&quot;&gt;&lt;/use&gt; 
+     &lt;/svg&gt; &lt;/button&gt;
+		Selector: [#closeButton]
+
+
+2: Elements must have sufficient color contrast
+Description: Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds
+Help URL: https://dequeuniversity.com/rules/axe/4.3/color-contrast?application=axeAPI
+Impact: serious
+Tags: cat.color, wcag2aa, wcag143
+		HTML element: &lt;span&gt;Info For:&lt;/span&gt;
+		Selector: [#infoFor &gt; span]
+		HTML element: &lt;a class=&quot;contact-sales w-button&quot; href=&quot;/contact-sales&quot; tabindex=&quot;4&quot;&gt;Contact Sales&lt;/a&gt;
+		Selector: [.nav-items-wrapper &gt; .contact-sales-container &gt; .contact-sales.w-button[href$=&quot;contact-sales&quot;]]
+
+
+3: id attribute value must be unique
+Description: Ensures every id attribute value is unique
+Help URL: https://dequeuniversity.com/rules/axe/4.3/duplicate-id?application=axeAPI
+Impact: minor
+Tags: cat.parsing, wcag2a, wcag411
+		HTML element: &lt;clipPath id=&quot;clip0&quot;&gt;
+			&lt;rect width=&quot;40&quot; height=&quot;40&quot; fill=&quot;white&quot; transform=&quot;translate(0 0.000976562)&quot;&gt;&lt;/rect&gt;
+			&lt;/clipPath&gt;
+		Selector: [#icon--service-pack-archive &gt; defs &gt; clippath]
+
+
+4: Images must have alternate text
+Description: Ensures &lt;img&gt; elements have alternate text or a role of none or presentation
+Help URL: https://dequeuniversity.com/rules/axe/4.3/image-alt?application=axeAPI
+Impact: critical
+Tags: cat.text-alternatives, wcag2a, wcag111, section508, section508.22.a, ACT
+		HTML element: &lt;img class=&quot;h-100 position-absolute w-100&quot; loading=&quot;lazy&quot; src=&quot;/documents/10182/232910227/Commerce+sites.png/bc4d3a44-abce-ed08-09df-0574d7e5f5ad?t=1664984685582&amp;amp;download=true&quot; data-fileentryid=&quot;456553576&quot; srcset=&quot;https://www-cdn.liferay.com/cdn-cgi/image/format=contain,format=auto,metadata=none,onerror=redirect,width=640/documents/10182/232910227/Commerce+sites.png/bc4d3a44-abce-ed08-09df-0574d7e5f5ad?t=1664984685582&amp;amp;download=true 640w,https://www-cdn.liferay.com/cdn-cgi/image/format=contain,format=auto,metadata=none,onerror=redirect,width=960/documents/10182/232910227/Commerce+sites.png/bc4d3a44-abce-ed08-09df-0574d7e5f5ad?t=1664984685582&amp;amp;download=true 960w,https://www-cdn.liferay.com/cdn-cgi/image/format=contain,format=auto,metadata=none,onerror=redirect,width=1280/documents/10182/232910227/Commerce+sites.png/bc4d3a44-abce-ed08-09df-0574d7e5f5ad?t=1664984685582&amp;amp;download=true 1280w&quot;&gt;
+		Selector: [.h-100.position-absolute[data-fileentryid=&quot;\34 56553576&quot;]]
+		HTML element: &lt;img class=&quot;h-100 position-absolute w-100&quot; loading=&quot;lazy&quot; src=&quot;/documents/10182/232910227/External+sites+%281%29.png/4c81b828-419f-afd6-13c8-392e2691208b?t=1664984779494&amp;amp;download=true&quot; data-fileentryid=&quot;456557216&quot; srcset=&quot;https://www-cdn.liferay.com/cdn-cgi/image/format=contain,format=auto,metadata=none,onerror=redirect,width=640/documents/10182/232910227/External+sites+%281%29.png/4c81b828-419f-afd6-13c8-392e2691208b?t=1664984779494&amp;amp;download=true 640w,https://www-cdn.liferay.com/cdn-cgi/image/format=contain,format=auto,metadata=none,onerror=redirect,width=960/documents/10182/232910227/External+sites+%281%29.png/4c81b828-419f-afd6-13c8-392e2691208b?t=1664984779494&amp;amp;download=true 960w,https://www-cdn.liferay.com/cdn-cgi/image/format=contain,format=auto,metadata=none,onerror=redirect,width=1280/documents/10182/232910227/External+sites+%281%29.png/4c81b828-419f-afd6-13c8-392e2691208b?t=1664984779494&amp;amp;download=true 1280w&quot;&gt;
+		Selector: [.h-100.position-absolute[data-fileentryid=&quot;\34 56557216&quot;]]
+		HTML element: &lt;img class=&quot;w-100&quot; loading=&quot;lazy&quot; src=&quot;/documents/10182/360801865/desjardins-gray.svg/b5c0ff7b-bb4f-3dcb-f0ba-990e98de8d06/desjardins-gray.svg?t=1621275793802&amp;amp;download=true&quot;&gt;
+		Selector: [div[data-lfr-editable-id=&quot;fvf27hxvumu&quot;] &gt; .w-100]
+
+
+5: Links must have discernible text
+Description: Ensures links have discernible text
+Help URL: https://dequeuniversity.com/rules/axe/4.3/link-name?application=axeAPI
+Impact: serious
+Tags: cat.name-role-value, wcag2a, wcag412, wcag244, section508, section508.22.a, ACT
+		HTML element: &lt;a class=&quot;liferay-logo&quot; href=&quot;/&quot; tabindex=&quot;2&quot;&gt; 
+       &lt;svg height=&quot;40&quot; viewBox=&quot;-.25 0 270 90&quot; width=&quot;120&quot;&gt; 
+        &lt;use xlink:href=&quot;#liferayLogo&quot;&gt;&lt;/use&gt; 
+       &lt;/svg&gt; &lt;/a&gt;
+		Selector: [.primary-nav &gt; .content-wrapper.align-center.flex &gt; .liferay-logo[href=&quot;\/&quot;]]
+		HTML element: &lt;a class=&quot;search-submit&quot; id=&quot;searchSubmitBtn&quot; href=&quot;/search&quot; type=&quot;submit&quot;&gt;
+		Selector: [#searchSubmitBtn]
+	at com.liferay.selenium.AccessibilityTesting.scanHomePage(AccessibilityTesting.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">scanHomePage()</td>
+<td class="failures">8.498s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 106.0.5249.61 (511755355844955cd3e264779baf0dd38212a4d0-refs/branch-heads/5249@{#569}) on port 29571
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1669589744.748][SEVERE]: bind() failed: Cannot assign requested address (99)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4</a> at Nov 28, 2022 6:55:53 AM</p>
+</div>
+</div>
+</body>
+</html>
