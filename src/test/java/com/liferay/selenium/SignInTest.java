@@ -2,43 +2,36 @@ package com.liferay.selenium;
 
 import com.liferay.selenium.page.SignInPage;
 import com.liferay.selenium.path.Icon;
-import com.liferay.selenium.webDriver.BrowserDriver;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
+import static driver.BrowserDriver.*;
 
 public class SignInTest {
 
-    WebDriver browserDriver;
-    WebDriverWait wait;
+    WebDriver webDriver;
 
     @BeforeEach
     public void setUp() {
-        browserDriver = BrowserDriver.start();
-        browserDriver.get("http://localhost:8080");
+        webDriver = start();
+        webDriver.get("http://localhost:8080");
     }
 
     @AfterEach
     public void tearDown() {
-        browserDriver.quit();
+        webDriver.quit();
     }
 
     @Test
     public void login() {
-        SignInPage signInPage = new SignInPage(browserDriver);
-        signInPage.clickSignInLink();
-        signInPage.setEmailAddress("test@liferay.com");
-        signInPage.setPassword("test");
-        signInPage.clickSignInButton();
+        SignInPage.clickSignInLink();
+        SignInPage.setEmailAddress("test@liferay.com");
+        SignInPage.setPassword("test");
+        SignInPage.clickSignInButton();
 
-        wait = new WebDriverWait(browserDriver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(BrowserDriver.getBy(Icon.USER_AVATAR)));
-        browserDriver.findElement(BrowserDriver.getBy(Icon.USER_AVATAR)).isDisplayed();
+        assertElementVisible(Icon.USER_AVATAR);
     }
 
 }
