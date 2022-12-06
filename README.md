@@ -42,8 +42,8 @@ File > New > Project > New Project
 
 If you would like to use example tests from this repo, follow these steps:
 
-  - Copy files from the [com.liferay.selenium](https://github.com/Tim-Cao/seleniumproject/tree/master/src/test/java/com/liferay/selenium) package to **yourProject/src/test/java/** directory
+  - Copy the [src](https://github.com/Tim-Cao/seleniumproject/tree/master/src/) directory to yourProject
 
-  - Replace the [chromedriver path](https://github.com/Tim-Cao/seleniumproject/blob/master/src/test/java/com/liferay/selenium/webDriver/BrowserDriver.java#L10) by your chromedriver path
+  - Replace the [chromedriver path](https://github.com/Tim-Cao/seleniumproject/blob/master/src/main/java/driver/BrowserDriver.java#L33) by your chromedriver path
 
   - Add the axe-core dependency **testImplementation('com.deque.html.axe-core:selenium:4.3.2')** to **build.gradle**
