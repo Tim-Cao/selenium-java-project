@@ -48,4 +48,23 @@ public class AccessibilityTest {
         }
     }
 
+    @Test
+    public void scanColorContrast() throws Exception {
+        waitForElementPresent(Link.LEARN_MORE);
+
+        AxeBuilder axeBuilder = new AxeBuilder();
+
+        axeBuilder.withTags(Arrays.asList("wcag2a", "wcag2aa", "wcag21a", "wcag21aa"));
+
+        Results results = axeBuilder.analyze(webDriver);
+
+        List<Rule> rules = results.getIncomplete();
+
+        if (!rules.isEmpty()) {
+            AxeReporter.getReadableAxeResults("incomplete", webDriver, rules);
+
+            throw new Exception(AxeReporter.getAxeResultString());
+        }
+    }
+
 }
