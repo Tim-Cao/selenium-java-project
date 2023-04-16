@@ -6,17 +6,25 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import com.deque.html.axecore.results.Results;
+import com.deque.html.axecore.results.Rule;
+import com.deque.html.axecore.selenium.AxeBuilder;
+import com.deque.html.axecore.selenium.AxeReporter;
 
 import java.time.Duration;
+import java.util.Arrays;
+import java.util.List;
 
 public class BrowserDriver {
-
-    private static WebDriver _webDriver;
-    private static WebDriverWait _webDriverWait;
 
     public static void assertElementVisible(String locator) {
         WebElement element = getElement(locator);
         element.isDisplayed();
+    }
+
+    public static void close() {
+        getDriver().quit();
     }
 
     public static By getBy(String locator) {
@@ -26,24 +34,76 @@ public class BrowserDriver {
     public static WebElement getElement(String locator) {
         waitForElementPresent(locator);
 
-        return _webDriver.findElement(getBy(locator));
+        return getDriver().findElement(getBy(locator));
     }
 
-    public static WebDriver start() {
-        System.setProperty("webdriver.chrome.driver","/home/liferay/Github/chromedriver");
+    public static void open(String url) {
+        getDriver().get(url);
+    }
 
-        _webDriver = new ChromeDriver();
+    public static void pause(long duration) {
+        _webDriverWait = new WebDriverWait(getDriver(), Duration.ofSeconds(duration));
+    }
 
-        WebDriver.Options options = _webDriver.manage();
+    public static void scanPage() throws Exception {
+        AxeBuilder axeBuilder = new AxeBuilder();
+
+        axeBuilder.withTags(Arrays.asList("wcag2a", "wcag2aa", "wcag21a", "wcag21aa"));
+
+        Results results = axeBuilder.analyze(getDriver());
+
+        List<Rule> rules = results.getViolations();
+
+        if (!rules.isEmpty()) {
+            AxeReporter.getReadableAxeResults("violations", getDriver(), rules);
+
+            throw new Exception(AxeReporter.getAxeResultString());
+        }
+    }
+
+    public static void scanColorContrast() throws Exception {
+        AxeBuilder axeBuilder = new AxeBuilder();
+
+        axeBuilder.withOnlyRules(Arrays.asList("color-contrast"));
+
+        Results results = axeBuilder.analyze(getDriver());
+
+        List<Rule> rules = results.getViolations();
+
+        if (!rules.isEmpty()) {
+            AxeReporter.getReadableAxeResults("violations", getDriver(), rules);
+
+            throw new Exception(AxeReporter.getAxeResultString());
+        }
+    }
+
+    public static void start() {
+        WebDriverManager.chromedriver().setup();
+
+        WebDriver webDriver = new ChromeDriver();
+        WebDriver.Options options = webDriver.manage();
         options.deleteAllCookies();
         options.window().maximize();
-
-        return _webDriver;
+        _threadLocalWebDriver.set(webDriver);
     }
+
+    public static WebDriver.TargetLocator switchTo() {
+        WebDriver.TargetLocator targetLocator = getDriver().switchTo();
+
+        return targetLocator;
+    }
+
     public static void waitForElementPresent(String locator) {
-        _webDriverWait = new WebDriverWait(_webDriver, Duration.ofSeconds(5));
+        _webDriverWait = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
         _webDriverWait.until(ExpectedConditions.presenceOfElementLocated(getBy(locator)));
 
     }
+
+    private static ThreadLocal<WebDriver> _threadLocalWebDriver = new ThreadLocal<>();
+
+    private static WebDriver getDriver() {
+        return _threadLocalWebDriver.get();
+    }
+    private static WebDriverWait _webDriverWait;
 
 }
