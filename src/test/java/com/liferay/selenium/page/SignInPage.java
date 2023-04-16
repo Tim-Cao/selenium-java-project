@@ -8,24 +8,31 @@ import org.openqa.selenium.WebElement;
 
 public class SignInPage {
 
-    public static void clickSignInLink() {
+    private static void clickSignInLink() {
         WebElement signInLink = getElement(Link.SIGN_IN);
         signInLink.click();
     }
 
-    public static void clickSignInButton() {
+    private static void clickSignInButton() {
         WebElement signInLink = getElement(Button.SIGN_IN);
         signInLink.click();
     }
-    public static void setEmailAddress(String emailAddress) {
+    private static void setEmailAddress(String emailAddress) {
         WebElement emailAddressInput = getElement(Input.EMAIL_ADDRESS);
         emailAddressInput.clear();
         emailAddressInput.sendKeys(emailAddress);
     }
 
-    public static void setPassword(String password) {
+    private static void setPassword(String password) {
         WebElement passwordInput = getElement(Input.PASSWORD);
         passwordInput.sendKeys(password);
+    }
+
+    public static void signIn(String emailAddress, String password) {
+        SignInPage.clickSignInLink();
+        SignInPage.setEmailAddress(emailAddress);
+        SignInPage.setPassword(password);
+        SignInPage.clickSignInButton();
     }
 
 }
