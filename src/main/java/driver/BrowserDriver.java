@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -80,10 +81,12 @@ public class BrowserDriver {
     public static void start() {
         WebDriverManager.chromedriver().setup();
 
-        WebDriver webDriver = new ChromeDriver();
-        WebDriver.Options options = webDriver.manage();
-        options.deleteAllCookies();
-        options.window().maximize();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+
+        WebDriver webDriver = new ChromeDriver(options);
+        webDriver.manage().deleteAllCookies();
+        webDriver.manage().window().maximize();
         _threadLocalWebDriver.set(webDriver);
     }
 
