@@ -14,8 +14,10 @@ import com.deque.html.axecore.selenium.AxeBuilder;
 import com.deque.html.axecore.selenium.AxeReporter;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class BrowserDriver {
 
@@ -46,7 +48,7 @@ public class BrowserDriver {
         _webDriverWait = new WebDriverWait(getDriver(), Duration.ofSeconds(duration));
     }
 
-    public static void scanPage() throws Exception {
+    public static void scanPage(String filterByImpacts) throws Exception {
         AxeBuilder axeBuilder = new AxeBuilder();
 
         axeBuilder.withTags(Arrays.asList("wcag2a", "wcag2aa", "wcag21a", "wcag21aa"));
@@ -55,8 +57,26 @@ public class BrowserDriver {
 
         List<Rule> rules = results.getViolations();
 
+        List<String> filterByImpactsList = new ArrayList<String>(Arrays.asList(filterByImpacts.split(",")));
+
         if (!rules.isEmpty()) {
-            AxeReporter.getReadableAxeResults("violations", getDriver(), rules);
+            List<Rule> violations = new ArrayList<Rule>();
+
+            if (filterByImpacts.isEmpty()) {
+                violations.addAll(rules);
+            }
+            else {
+                filterByImpactsList.stream()
+                        .forEach(
+                                filterByImpact -> violations.addAll(rules.stream()
+                                        .filter(
+                                                rule ->
+                                                        rule.getImpact().equals(filterByImpact)
+                                        ).collect(Collectors.toList()))
+                        );
+            }
+
+            AxeReporter.getReadableAxeResults("violations", getDriver(), violations);
 
             throw new Exception(AxeReporter.getAxeResultString());
         }
