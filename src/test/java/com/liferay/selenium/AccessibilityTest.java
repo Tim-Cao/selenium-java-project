@@ -24,9 +24,15 @@ public class AccessibilityTest {
     public void scanHomePage() throws Exception {
         waitForElementPresent(Link.LEARN_MORE);
 
-        scanPage();
+        scanPage("");
     }
 
+    @Test
+    public void scanHomePageBySpecificImpacts() throws Exception {
+        waitForElementPresent(Link.LEARN_MORE);
+
+        scanPage("critical,serious");
+    }
     @Test
     public void scanHomePageColorContrast() throws Exception {
         waitForElementPresent(Link.LEARN_MORE);
