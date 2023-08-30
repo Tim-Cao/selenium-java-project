@@ -33,6 +33,7 @@ public class AccessibilityTest {
 
         scanPage("critical,serious");
     }
+
     @Test
     public void scanHomePageColorContrast() throws Exception {
         waitForElementPresent(Link.LEARN_MORE);
