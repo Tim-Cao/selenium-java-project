@@ -57,10 +57,11 @@ public class BrowserDriver {
 
         List<Rule> rules = results.getViolations();
 
-        List<String> filterByImpactsList = new ArrayList<String>(Arrays.asList(filterByImpacts.split(",")));
-
         if (!rules.isEmpty()) {
             List<Rule> violations = new ArrayList<Rule>();
+
+            List<String> filterByImpactsList = new ArrayList<String>(
+                    Arrays.asList(filterByImpacts.split(",")));
 
             if (filterByImpacts.isEmpty()) {
                 violations.addAll(rules);
@@ -68,10 +69,12 @@ public class BrowserDriver {
             else {
                 filterByImpactsList.stream()
                     .forEach(
-                        filterByImpact -> violations.addAll(rules.stream()
-                            .filter(
-                                rule -> rule.getImpact().equals(filterByImpact)
-                            ).collect(Collectors.toList()))
+                        filterByImpact -> violations.addAll(
+                                rules.stream()
+                                    .filter(
+                                        rule -> rule.getImpact().equals(filterByImpact)
+                                    ).collect(Collectors.toList())
+                        )
                     );
             }
 
