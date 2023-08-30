@@ -67,13 +67,12 @@ public class BrowserDriver {
             }
             else {
                 filterByImpactsList.stream()
-                        .forEach(
-                                filterByImpact -> violations.addAll(rules.stream()
-                                        .filter(
-                                                rule ->
-                                                        rule.getImpact().equals(filterByImpact)
-                                        ).collect(Collectors.toList()))
-                        );
+                    .forEach(
+                        filterByImpact -> violations.addAll(rules.stream()
+                            .filter(
+                                rule -> rule.getImpact().equals(filterByImpact)
+                            ).collect(Collectors.toList()))
+                    );
             }
 
             AxeReporter.getReadableAxeResults("violations", getDriver(), violations);
