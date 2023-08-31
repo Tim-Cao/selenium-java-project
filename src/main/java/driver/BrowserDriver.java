@@ -60,13 +60,13 @@ public class BrowserDriver {
         if (!rules.isEmpty()) {
             List<Rule> violations = new ArrayList<Rule>();
 
-            List<String> filterByImpactsList = new ArrayList<String>(
-                    Arrays.asList(filterByImpacts.split(",")));
-
-            if (filterByImpactsList.isEmpty()) {
+            if (filterByImpacts.isEmpty()) {
                 violations.addAll(rules);
             }
             else {
+                List<String> filterByImpactsList = new ArrayList<String>(
+                        Arrays.asList(filterByImpacts.split(",")));
+
                 filterByImpactsList.stream()
                     .forEach(
                         filterByImpact -> violations.addAll(
