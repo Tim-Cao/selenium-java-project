@@ -63,7 +63,7 @@ public class BrowserDriver {
             List<String> filterByImpactsList = new ArrayList<String>(
                     Arrays.asList(filterByImpacts.split(",")));
 
-            if (filterByImpacts.isEmpty()) {
+            if (filterByImpactsList.isEmpty()) {
                 violations.addAll(rules);
             }
             else {
