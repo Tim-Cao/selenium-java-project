@@ -1,21 +1,22 @@
 package com.liferay.selenium;
 
 import com.liferay.selenium.path.Link;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
 
 import static driver.BrowserDriver.*;
 
 public class AccessibilityTest {
 
-    @BeforeEach
+    @Before
     public void setUp() {
         start();
         open("https://www.liferay.com/");
     }
 
-    @AfterEach
+    @After
     public void tearDown() {
         close();
     }
