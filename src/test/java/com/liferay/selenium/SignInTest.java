@@ -2,21 +2,21 @@ package com.liferay.selenium;
 
 import com.liferay.selenium.page.SignInPage;
 import com.liferay.selenium.path.Icon;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import static driver.BrowserDriver.*;
 
 public class SignInTest {
 
-    @BeforeEach
+    @Before
     public void setUp() {
         start();
         open("http://localhost:8080");
     }
 
-    @AfterEach
+    @After
     public void tearDown() {
         close();
     }
