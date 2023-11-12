@@ -15,11 +15,10 @@ dependencies {
     implementation('com.deque.html.axe-core:selenium:4.8.0')
     implementation('org.seleniumhq.selenium:selenium-java:4.13.0')
 
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
-
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+    testImplementation group: 'junit', name: 'junit', version: '4.13.1'
 }
 
 test {
-    useJUnitPlatform()
+    useJUnit()
+
 }
