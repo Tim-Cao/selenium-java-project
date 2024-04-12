@@ -22,7 +22,7 @@ public class SignInTest {
     }
 
     @Test
-    public void login() {
+    public void testLogin() {
         SignInPage.signIn("test@liferay.com", "test");
 
         assertElementVisible(Icon.USER_AVATAR);
