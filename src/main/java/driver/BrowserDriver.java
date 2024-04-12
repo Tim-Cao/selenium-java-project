@@ -34,6 +34,10 @@ public class BrowserDriver {
         return By.xpath(locator);
     }
 
+    public static WebDriver getDriver() {
+        return _threadLocalWebDriver.get();
+    }
+
     public static WebElement getElement(String locator) {
         waitForElementPresent(locator);
 
@@ -126,9 +130,6 @@ public class BrowserDriver {
 
     private static ThreadLocal<WebDriver> _threadLocalWebDriver = new ThreadLocal<>();
 
-    private static WebDriver getDriver() {
-        return _threadLocalWebDriver.get();
-    }
     private static WebDriverWait _webDriverWait;
 
 }
