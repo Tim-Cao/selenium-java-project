@@ -53,3 +53,19 @@ If you would like to use example tests from this repo, follow these steps:
 If you would like to parallel run SitesAdminTest, follow this guide:
 
 - [Run Test Suite](https://www.jetbrains.com/help/idea/testng.html#run-test-suite)
+
+## Run single test in the class
+
+### Intellij
+
+- Right-click on the method name in the code editor and select:
+
+  - Run ***testTwoPlusTwo()***
+
+- Click on the method name in the code editor and press the key combination:
+
+  - ***ctrl + shift + F10***
+
+### Command Line
+
+- Run  `./gradlew clean test --tests SignInTest.testLogin`
