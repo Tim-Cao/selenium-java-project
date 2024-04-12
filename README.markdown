@@ -60,7 +60,7 @@ If you would like to parallel run SitesAdminTest, follow this guide:
 
 - Right-click on the method name in the code editor and select:
 
-  - Run ***testTwoPlusTwo()***
+  - Run ***testLogin()***
 
 - Click on the method name in the code editor and press the key combination:
 
