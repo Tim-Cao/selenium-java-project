@@ -13,7 +13,7 @@ public class AccessibilityTest {
     @Before
     public void setUp() {
         start();
-        open("https://www.liferay.com/");
+        open("https://www.github.com/");
     }
 
     @After
@@ -23,21 +23,21 @@ public class AccessibilityTest {
 
     @Test
     public void scanHomePage() throws Exception {
-        waitForElementPresent(Link.LEARN_MORE);
+        waitForElementPresent(Link.SIGN_IN);
 
         scanPage("");
     }
 
     @Test
     public void scanHomePageBySpecificImpacts() throws Exception {
-        waitForElementPresent(Link.LEARN_MORE);
+        waitForElementPresent(Link.SIGN_IN);
 
         scanPage("critical,serious");
     }
 
     @Test
     public void scanHomePageColorContrast() throws Exception {
-        waitForElementPresent(Link.LEARN_MORE);
+        waitForElementPresent(Link.SIGN_IN);
 
         scanColorContrast();
     }
