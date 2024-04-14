@@ -2,27 +2,28 @@
 
 ## Prerequisite
 
-- Install [JDK](https://www.oracle.com/java/technologies/downloads/)
+- Install [JDK 11 or above](https://www.oracle.com/java/technologies/downloads/)
 
 - Install [Intellij Community Edition](https://www.jetbrains.com/idea/download/#section=linux)
 
 ## Add a java project using gradle
 
-File > New > Project > New Project
+- File > New > Project > New Project
 
-    Name: YourProjectName
+        Name: YourProjectName
+        
+        Location: Your project location
+        
+        Language: Java
+        
+        Build System: Gradle
+        
+        JDK: Your jdk
+        
+        Gradle DSL: Groovy
+        
+        Add sample code: unchecked
 
-    Location: Your project location
-
-    Language: Java
-
-    Build System: Gradle
-
-    JDK: Your jdk
-
-    Gradle DSL: Groovy
-
-    Add sample code: unchecked
 
 ## Add selenium dependencies
 
