@@ -1,5 +1,6 @@
 package driver;
 
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,7 +24,7 @@ public class BrowserDriver {
 
     public static void assertElementVisible(String locator) {
         WebElement element = getElement(locator);
-        element.isDisplayed();
+        Assert.assertTrue(element.isDisplayed());
     }
 
     public static void close() {
