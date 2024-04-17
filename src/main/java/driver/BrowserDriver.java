@@ -22,6 +22,11 @@ import java.util.stream.Collectors;
 
 public class BrowserDriver {
 
+    public static void assertElementPresent(String locator) {
+        List<WebElement> elements = getDriver().findElements(By.xpath(locator));
+        Assert.assertFalse(elements.isEmpty());
+    }
+
     public static void assertElementVisible(String locator) {
         WebElement element = getElement(locator);
         Assert.assertTrue(element.isDisplayed());
