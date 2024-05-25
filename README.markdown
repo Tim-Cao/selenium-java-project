@@ -61,8 +61,7 @@ If you would like to use example codes from this repo, follow these steps:
 
 - Add the following dependencies to ***build.gradle***
 
-      implementation 'org.testng:testng:7.0.0'
-
+      implementation('org.testng:testng:7.0.0')
       implementation('com.deque.html.axe-core:selenium:4.8.0')
 
 If you would like to parallel run SitesAdminTest, follow this guide:
