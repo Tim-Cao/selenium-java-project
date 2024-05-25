@@ -18,7 +18,7 @@ public class SearchTest {
     }
 
     @Test
-    public void searchByKeywords() {
+    public void testSearchByKeywords() {
         open("https://www.baidu.com");
 
         SearchPage.type("//input[contains(@class,'s_ipt')]", "今日热点");
