@@ -39,11 +39,21 @@
 
     ![LoadGradleChanges](https://user-images.githubusercontent.com/52661397/204166225-82c7f921-18f8-4f8e-b157-4e68773d25a1.png)
 
-## Add driver classes to encapsulate selenium APIs under src/main/java/driver
+## Add driver classes to encapsulate selenium APIs
 
-## Add page object classes to wrap specific tasks under test/java/com/selenium
+- Add classes under ***/src/main/java/package***
 
-## Add tests under test/java/com/selenium
+- The ***WebDriverManager*** will download chromedriver automatically in runtime
+
+      WebDriverManager.chromedriver().setup();
+
+## Add page object classes to wrap specific tasks
+
+- Add classes under ***/src/test/java/package***
+
+## Add tests
+
+- Add classes under ***/src/test/java/package***
 
 If you would like to use example codes from this repo, follow these steps:
 
