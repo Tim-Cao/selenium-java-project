@@ -17,6 +17,12 @@ public class SelectFrame {
         targetLocator.frame(_frameWebElements.peek());
     }
 
+    public static void selectParentFrame(String locator) {
+        WebDriver.TargetLocator targetLocator = switchTo();
+
+        targetLocator.parentFrame();
+    }
+
     public static void selectFrameTop() {
         WebDriver.TargetLocator targetLocator = switchTo();
 
