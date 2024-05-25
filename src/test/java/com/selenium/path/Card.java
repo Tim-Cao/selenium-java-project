@@ -1,4 +1,4 @@
-package com.liferay.selenium.path;
+package com.selenium.path;
 
 public class Card {
 

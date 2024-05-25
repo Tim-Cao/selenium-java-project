@@ -1,4 +1,4 @@
-package com.liferay.selenium.interactions;
+package driver;
 
 import org.openqa.selenium.Dimension;
 

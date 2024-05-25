@@ -1,11 +1,11 @@
-package com.liferay.selenium;
+package com.selenium;
 
-import com.liferay.selenium.frame.SelectFrame;
-import com.liferay.selenium.page.SignInPage;
-import com.liferay.selenium.path.Icon;
-import com.liferay.selenium.path.Message;
-import com.liferay.selenium.site.Site;
-import com.liferay.selenium.util.*;
+import com.selenium.page.SignInPage;
+import com.selenium.path.Icon;
+import com.selenium.path.Message;
+import com.selenium.site.Site;
+import com.selenium.util.Constants;
+import driver.SelectFrame;
 
 import static driver.BrowserDriver.*;
 

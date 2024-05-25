@@ -1,12 +1,10 @@
-package com.liferay.selenium.frame;
+package driver;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import static driver.BrowserDriver.*;
 
 import java.util.Stack;
-
-import static driver.BrowserDriver.getElement;
-import static driver.BrowserDriver.switchTo;
 
 public class SelectFrame {
     public static void selectFrame(String locator) {

@@ -1,7 +1,10 @@
-package com.liferay.selenium.site;
+package com.selenium.site;
 
-import com.liferay.selenium.frame.SelectFrame;
-import com.liferay.selenium.path.*;
+import com.selenium.path.Button;
+import com.selenium.path.Card;
+import com.selenium.path.Icon;
+import com.selenium.path.Input;
+import driver.SelectFrame;
 
 import static driver.BrowserDriver.*;
 

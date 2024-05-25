@@ -1,6 +1,6 @@
-package com.liferay.selenium;
+package com.selenium;
 
-import com.liferay.selenium.path.Link;
+import com.selenium.path.Link;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

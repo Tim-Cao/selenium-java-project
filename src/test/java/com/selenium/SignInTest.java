@@ -1,7 +1,7 @@
-package com.liferay.selenium;
+package com.selenium;
 
-import com.liferay.selenium.page.SignInPage;
-import com.liferay.selenium.path.Icon;
+import com.selenium.page.SignInPage;
+import com.selenium.path.Icon;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,9 +1,10 @@
-package com.liferay.selenium.page;
+package com.selenium.page;
 
-import com.liferay.selenium.path.Button;
-import com.liferay.selenium.path.Input;
-import com.liferay.selenium.path.Link;
+import com.selenium.path.Button;
+import com.selenium.path.Input;
+import com.selenium.path.Link;
 import static driver.BrowserDriver.*;
+
 import org.openqa.selenium.WebElement;
 
 public class SignInPage {
