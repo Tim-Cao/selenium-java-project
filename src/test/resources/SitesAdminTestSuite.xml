@@ -3,7 +3,7 @@
 <suite name="Parallel Test Suite" parallel="methods" thread-count="2">
     <test name = "Sites Admin Test">
         <classes>
-            <class name = "com.liferay.selenium.SitesAdminTest" />
+            <class name = "com.selenium.SitesAdminTest" />
         </classes>
     </test>
 </suite>

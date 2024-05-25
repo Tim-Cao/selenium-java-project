@@ -55,7 +55,7 @@ public class BrowserDriver {
     }
 
     public static void pause(long duration) {
-        _webDriverWait = new WebDriverWait(getDriver(), Duration.ofSeconds(duration));
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(duration));
     }
 
     public static void scanPage(String filterByImpacts) throws Exception {

@@ -1,6 +1,6 @@
-package com.liferay.selenium;
+package com.selenium;
 
-import com.liferay.selenium.page.SearchPage;
+import com.selenium.page.SearchPage;
 import org.junit.*;
 
 import static driver.BrowserDriver.*;

@@ -1,4 +1,4 @@
-package com.liferay.selenium.page;
+package com.selenium.page;
 
 import static driver.BrowserDriver.*;
 import org.openqa.selenium.WebElement;

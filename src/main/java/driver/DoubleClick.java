@@ -1,4 +1,4 @@
-package com.liferay.selenium.interactions;
+package driver;
 
 import static driver.BrowserDriver.*;
 import org.openqa.selenium.WebElement;

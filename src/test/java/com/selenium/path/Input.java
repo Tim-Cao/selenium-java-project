@@ -1,4 +1,4 @@
-package com.liferay.selenium.path;
+package com.selenium.path;
 
 public class Input {
     public static final String EMAIL_ADDRESS = "//label[normalize-space(text())='Email Address']//following-sibling::input";
