@@ -1,4 +1,4 @@
-# How to set up a selenium project using gradle?
+# How to set up a selenium project with Java?
 
 ## Prerequisite
 
@@ -25,29 +25,33 @@
         Add sample code: unchecked
 
 
-## Add selenium dependencies
+## Add required dependencies
 
-- Add the Selenium Java dependency from [maven central](https://mvnrepository.com/repos/central) to ***build.gradle***
+- Add required dependencies from [maven central](https://mvnrepository.com/repos/central) to ***build.gradle***
 
 - For example,
 
-      testImplementation('org.seleniumhq.selenium:selenium-java:4.13.0')
+      implementation('junit:junit:4.13.1')
+      implementation('io.github.bonigarcia:webdrivermanager:5.7.0')
+      implementation('org.seleniumhq.selenium:selenium-java:4.18.1')
 
 - Load Gradle Changes
 
     ![LoadGradleChanges](https://user-images.githubusercontent.com/52661397/204166225-82c7f921-18f8-4f8e-b157-4e68773d25a1.png)
 
-## Add tests
+## Add driver classes to encapsulate selenium APIs under src/main/java/driver
 
-If you would like to use example tests from this repo, follow these steps:
+## Add page object classes to wrap specific tasks under test/java/com/selenium
+
+## Add tests under test/java/com/selenium
+
+If you would like to use example codes from this repo, follow these steps:
 
 - Copy the [src](src) directory to yourProject
 
 - Add the following dependencies to ***build.gradle***
 
       implementation 'org.testng:testng:7.0.0'
-
-      implementation 'io.github.bonigarcia:webdrivermanager:5.6.0'
 
       implementation('com.deque.html.axe-core:selenium:4.8.0')
 
