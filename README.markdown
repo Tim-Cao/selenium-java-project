@@ -49,11 +49,11 @@
 
 ## Add page object classes to wrap specific tasks
 
-- Add classes under ***/src/test/java/package***
+- Add classes under ***/tests/test/java/package***
 
 ## Add tests
 
-- Add classes under ***/src/test/java/package***
+- Add classes under ***/tests/test/java/package***
 
 If you would like to use example codes from this repo, follow these steps:
 
@@ -83,4 +83,4 @@ If you would like to parallel run SitesAdminTest, follow this guide:
 
 ### Command Line
 
-- Run  `./gradlew clean test --tests SignInTest.testLogin`
+- Run  `./gradlew clean test --tests SearchTest.testSearchByKeywords`
