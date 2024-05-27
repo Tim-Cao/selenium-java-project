@@ -49,11 +49,11 @@
 
 ## Add page object classes to wrap specific tasks
 
-- Add classes under ***/tests/test/java/package***
+- Add classes under ***/src/test/java/package***
 
 ## Add tests
 
-- Add classes under ***/tests/test/java/package***
+- Add classes under ***/src/test/java/package***
 
 If you would like to use example codes from this repo, follow these steps:
 
