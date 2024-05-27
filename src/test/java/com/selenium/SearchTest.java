@@ -24,7 +24,7 @@ public class SearchTest {
         SearchPage.type("//input[contains(@class,'s_ipt')]", "今日热点");
         SearchPage.clickSearchButton("//input[@type='submit']");
 
-        assertElementVisible("//a[normalize-space()='今日热点的最新相关信息']");
+        assertElementVisible("//span[normalize-space()='百度为您找到以下结果']");
     }
 
 }
